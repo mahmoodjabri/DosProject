@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 @Service
 public class CatalogService {
@@ -16,15 +14,15 @@ public class CatalogService {
     }
 
     public List getListOfCatalogs() {
-        return repository.getall();
+        return repository.getAll();
     }
 
     public List getListOfTopic(String a) {
-        return repository.gettopic(a);
+        return repository.getTopic(a);
     }
 
     public List getListOfInfo() {
-        return repository.getallInfo();
+        return repository.getAllInfo();
     }
 
     public List getInfo(String s) {
@@ -36,8 +34,8 @@ public class CatalogService {
         return repository.getInfoQ(s);
     }
     @Transactional
-    public void infoedit(Long s) {
-        repository.infoedit(s);
+    public void infoEdit(Long s) {
+        repository.infoEdit(s);
     }
 }
 
